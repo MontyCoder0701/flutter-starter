@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'main-scaffold.dart';
+import 'main_scaffold.dart';
 import 'screens/explore.dart';
 import 'screens/home.dart';
 import 'screens/profile.dart';
