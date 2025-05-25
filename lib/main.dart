@@ -30,9 +30,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    Center(child: Text('Page 1 - Add')),
-    Center(child: Text('Page 2 - Home')),
-    Center(child: Text('Page 3 - Delete')),
+    Center(child: Text('Page 1')),
+    Center(child: Text('Page 2')),
+    Center(child: Text('Page 3')),
   ];
 
   void _onItemTapped(int index) {
@@ -44,7 +44,37 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              child: const Text(
+                'Drawer',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.add),
+              title: Text('Item 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Item 2'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.delete),
+              title: Text('Item 3'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Flutter Starter'),
