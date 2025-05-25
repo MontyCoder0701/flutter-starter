@@ -7,7 +7,8 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ### State Management
 
-- [**Riverpod**](https://riverpod.dev/)
+- [**Riverpod**](https://riverpod.dev/) for basic state management
+- Applied to theme and locale
 
 ### Router
 
@@ -23,6 +24,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 ### Local Storage
 
 - [**shared_preferences**](https://pub.dev/packages/shared_preferences) for local storage
+- Applied to theme and locale persistance
 
 ### Maintenance
 
