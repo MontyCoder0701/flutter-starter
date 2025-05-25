@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class MainScaffold extends StatelessWidget {
+import 'providers/theme_provider.dart';
+
+class MainScaffold extends ConsumerWidget {
   final Widget child;
 
   const MainScaffold({super.key, required this.child});
@@ -14,9 +17,12 @@ class MainScaffold extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final String location = GoRouterState.of(context).uri.toString();
-    final int selectedIndex = _locationToTabIndex(location);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeProvider);
+    final isDark = themeMode == ThemeMode.dark;
+
+    final location = GoRouterState.of(context).uri.toString();
+    final selectedIndex = _locationToTabIndex(location);
 
     return Scaffold(
       drawer: Drawer(
@@ -27,9 +33,12 @@ class MainScaffold extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primary,
               ),
-              child: const Text(
+              child: Text(
                 'Drawer',
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  fontSize: 24,
+                ),
               ),
             ),
             ListTile(
@@ -54,6 +63,16 @@ class MainScaffold extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
                 context.go('/screen3');
+              },
+            ),
+            const Divider(),
+            SwitchListTile(
+              title: const Text('Theme'),
+              secondary: const Icon(Icons.dark_mode),
+              value: isDark,
+              onChanged: (value) {
+                final themeNotifier = ref.read(themeProvider.notifier);
+                themeNotifier.state = value ? ThemeMode.dark : ThemeMode.light;
               },
             ),
           ],
