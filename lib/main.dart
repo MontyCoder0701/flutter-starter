@@ -3,9 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:upgrader/upgrader.dart';
 
 import 'main_scaffold.dart';
-import 'screens/explore.dart';
-import 'screens/home.dart';
-import 'screens/profile.dart';
+import 'screens/screen1.dart';
+import 'screens/screen2.dart';
+import 'screens/screen3.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,19 +13,25 @@ void main() async {
 }
 
 final _router = GoRouter(
-  initialLocation: '/home',
+  initialLocation: '/screen1',
   routes: [
     ShellRoute(
       builder: (context, state, child) => MainScaffold(child: child),
       routes: [
-        GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
         GoRoute(
-          path: '/explore',
-          builder: (context, state) => const ExploreScreen(),
+          path: '/screen1',
+          pageBuilder: (context, state) =>
+              const NoTransitionPage(child: Screen1()),
         ),
         GoRoute(
-          path: '/profile',
-          builder: (context, state) => const ProfileScreen(),
+          path: '/screen2',
+          pageBuilder: (context, state) =>
+              const NoTransitionPage(child: Screen2()),
+        ),
+        GoRoute(
+          path: '/screen3',
+          pageBuilder: (context, state) =>
+              const NoTransitionPage(child: Screen3()),
         ),
       ],
     ),

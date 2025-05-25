@@ -6,7 +6,7 @@ class MainScaffold extends StatelessWidget {
 
   const MainScaffold({super.key, required this.child});
 
-  static const tabs = ['/home', '/explore', '/profile'];
+  static const tabs = ['/screen1', '/screen2', '/screen3'];
 
   int _locationToTabIndex(String location) {
     final index = tabs.indexWhere((t) => location.startsWith(t));
@@ -34,18 +34,18 @@ class MainScaffold extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () => context.go('/home'),
+              title: const Text('Screen 1'),
+              onTap: () => context.go('/screen1'),
             ),
             ListTile(
               leading: const Icon(Icons.explore),
-              title: const Text('Explore'),
-              onTap: () => context.go('/explore'),
+              title: const Text('Screen 2'),
+              onTap: () => context.go('/screen2'),
             ),
             ListTile(
               leading: const Icon(Icons.person),
-              title: const Text('Profile'),
-              onTap: () => context.go('/profile'),
+              title: const Text('Screen 3'),
+              onTap: () => context.go('/screen3'),
             ),
           ],
         ),
@@ -59,9 +59,9 @@ class MainScaffold extends StatelessWidget {
         currentIndex: selectedIndex,
         onTap: (index) => context.go(tabs[index]),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Screen 1'),
+          BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Screen 2'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Screen 3'),
         ],
       ),
     );
