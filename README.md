@@ -43,7 +43,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 <img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/36dca49c-e37f-432f-b93d-461fad5a6ae7" />
 
-<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/fe6b5735-faa7-4ee3-a036-4ecf2aafc185" />
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/e1a16afc-9289-4240-b05b-6086ebfb73b8" />
 
 ## Notice
 
