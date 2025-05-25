@@ -14,6 +14,11 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 - [**go_router**](https://pub.dev/packages/go_router) for navigation
 - Applied shell router to bottom navigation bar
 
+### Translations
+
+- Using Flutter's localizations and intl
+- Run `flutter gen-l10n` to just generate translation
+
 ### Maintenance
 
 - **Release Please** – automated release management
