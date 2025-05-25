@@ -18,7 +18,11 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 - Using Flutter's localizations and intl:
 
->  Change `lib/l10n/app_en.arb` and run `flutter gen-l10n` to just generate translation
+> Change `lib/l10n/app_en.arb` and run `flutter gen-l10n` to just generate translation
+
+### Local Storage
+
+- [**shared_preferences**](https://pub.dev/packages/shared_preferences) for local storage
 
 ### Maintenance
 
