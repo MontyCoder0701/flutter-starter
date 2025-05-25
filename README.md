@@ -1,16 +1,38 @@
-# flutter_starter
+# Flutter Starter
 
-A new Flutter project.
+This is a simple starter repository for Flutter projects.  
+Use it for hackathons or external projects as a boilerplate — clone and customize as needed.
 
-## Getting Started
+## What's Included
 
-This project is a starting point for a Flutter application.
+### GitHub Actions
 
-A few resources to get you started if this is your first Flutter project:
+- **Release Please** – automated release management
+- **Dependabot** – automatic dependency updates
+- **Dependabot Validation** - automatic build check for dependabot PRs
+- **CI** – basic continuous integration for lint checks
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Router
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [**go_router**](https://pub.dev/packages/go_router) for navigation
+- Applied shell router to bottom navigation bar
+
+### Design
+
+- Material(Google) for UI components
+- Basic layout with bottom navigation bar
+- Ready for iOS and Android
+
+## Preview
+
+<!-- markdownlint-disable MD033 -->
+
+### iOS
+
+### Android
+
+## Notice
+
+If you're using Dependabot, ensure the following setting is enabled:
+
+> **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**
