@@ -5,7 +5,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ## What's Included
 
-## State Management
+### State Management
 
 - [**Riverpod**](https://riverpod.dev/)
 
