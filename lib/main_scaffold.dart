@@ -35,17 +35,26 @@ class MainScaffold extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.home),
               title: const Text('Screen 1'),
-              onTap: () => context.go('/screen1'),
+              onTap: () {
+                Navigator.pop(context);
+                context.go('/screen1');
+              },
             ),
             ListTile(
               leading: const Icon(Icons.explore),
               title: const Text('Screen 2'),
-              onTap: () => context.go('/screen2'),
+              onTap: () {
+                Navigator.pop(context);
+                context.go('/screen2');
+              },
             ),
             ListTile(
               leading: const Icon(Icons.person),
               title: const Text('Screen 3'),
-              onTap: () => context.go('/screen3'),
+              onTap: () {
+                Navigator.pop(context);
+                context.go('/screen3');
+              },
             ),
           ],
         ),
