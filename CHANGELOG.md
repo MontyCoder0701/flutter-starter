@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/MontyCoder0701/flutter-starter/compare/v1.0.0...v1.1.0) (2025-05-25)
+
+
+### Features
+
+* theme 설정 추가 ([44ffa03](https://github.com/MontyCoder0701/flutter-starter/commit/44ffa03699bbdb0723d9b17926e34aff0299541e))
+
+
+### Bug Fixes
+
+* 다크모드 적용 ([c87ac1c](https://github.com/MontyCoder0701/flutter-starter/commit/c87ac1c78f1fb47891f1d83b724c3b51b7622484))
+
 ## 1.0.0 (2025-05-25)
 
 
