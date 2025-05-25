@@ -1,0 +1,39 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - 'dependabot/**'
+  push:
+    branches:
+      - 'dependabot/**'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Java Version: https://github.com/flutter/flutter/blob/master/packages/flutter_tools/lib/src/android/gradle_utils.dart
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '24'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Refresh Flutter packages
+        run: |
+          flutter clean
+          flutter pub get
+
+      - name: Build Android App
+        run: flutter build appbundle --debug
+
+      - name: Build iOS App
+        run: flutter build ios --no-codesign
