@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/MontyCoder0701/flutter-starter/compare/v1.2.0...v1.3.0) (2025-05-25)
+
+
+### Features
+
+* add local storage ([0aaeca9](https://github.com/MontyCoder0701/flutter-starter/commit/0aaeca9c3e770a49c753b74760b8543d4aad6f53))
+
 ## [1.2.0](https://github.com/MontyCoder0701/flutter-starter/compare/v1.1.0...v1.2.0) (2025-05-25)
 
 
