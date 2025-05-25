@@ -5,12 +5,13 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ## What's Included
 
-### GitHub Actions
+### Maintenance
 
 - **Release Please** – automated release management
 - **Dependabot** – automatic dependency updates
 - **Dependabot Validation** - automatic build check for dependabot PRs
 - **CI** – basic continuous integration for lint checks
+- **Upgrader** - alerts users when update is published in application store
 
 ### Router
 
