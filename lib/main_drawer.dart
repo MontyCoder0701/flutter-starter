@@ -15,7 +15,7 @@ class MainDrawer extends ConsumerWidget {
     final isDarkTheme = themeNotifier.isDarkTheme;
 
     final localeNotifier = ref.read(localeProvider.notifier);
-    final isLocaleEnglish = localeNotifier.state == const Locale('en');
+    final isLocaleEnglish = localeNotifier.isLocaleEnglish;
     final localize = AppLocalizations.of(context)!;
 
     return Drawer(
@@ -72,7 +72,7 @@ class MainDrawer extends ConsumerWidget {
             secondary: const Icon(Icons.language),
             value: isLocaleEnglish,
             onChanged: (value) {
-              isLocaleEnglish ? const Locale('en') : const Locale('ko');
+              localeNotifier.toggleLocale();
             },
           ),
         ],
