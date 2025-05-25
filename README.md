@@ -42,13 +42,13 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 <img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/d038ce8b-a4e7-4956-88d9-a15d2c5fc828" />
 
-<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/cc567b5b-f888-4cf6-8cb8-4e5e6637ee6b" />
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/034419d1-1075-4610-97cc-121e4b16c293" />
 
 ### Android
 
 <img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/36dca49c-e37f-432f-b93d-461fad5a6ae7" />
 
-<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/e1a16afc-9289-4240-b05b-6086ebfb73b8" />
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/79d4995a-a774-44c8-9918-798a28c30b14" />
 
 ## Notice
 
