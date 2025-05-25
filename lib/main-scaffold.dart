@@ -51,7 +51,7 @@ class MainScaffold extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: const Text('Modern Flutter App'),
+        title: const Text('Flutter Starter'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: child,
