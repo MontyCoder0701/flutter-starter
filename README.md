@@ -16,8 +16,9 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ### Translations
 
-- Using Flutter's localizations and intl
-- Run `flutter gen-l10n` to just generate translation
+- Using Flutter's localizations and intl:
+
+> Run `flutter gen-l10n` to just generate translation
 
 ### Maintenance
 
