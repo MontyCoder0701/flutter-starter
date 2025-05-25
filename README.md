@@ -30,7 +30,15 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ### iOS
 
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/d038ce8b-a4e7-4956-88d9-a15d2c5fc828" />
+
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/7c4ebf02-407f-4b08-9d6a-460720fa2306" />
+
 ### Android
+
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/36dca49c-e37f-432f-b93d-461fad5a6ae7" />
+
+<img width="300" alt="Screenshot 2025-05-25 at 1 24 47 PM" src="https://github.com/user-attachments/assets/fe6b5735-faa7-4ee3-a036-4ecf2aafc185" />
 
 ## Notice
 
