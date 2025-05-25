@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_starter/go_router.dart';
 import 'package:flutter_starter/providers/theme_provider.dart';
+import 'package:flutter_starter/theme.dart';
 import 'package:upgrader/upgrader.dart';
 
 void main() async {
@@ -20,18 +21,8 @@ class MyApp extends ConsumerWidget {
       child: MaterialApp.router(
         title: 'Flutter Starter',
         themeMode: themeMode,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.deepPurple,
-            brightness: Brightness.light,
-          ),
-        ),
-        darkTheme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.deepPurple,
-            brightness: Brightness.dark,
-          ),
-        ),
+        theme: CustomTheme.light,
+        darkTheme: CustomTheme.dark,
         routerConfig: goRouter,
       ),
     );
