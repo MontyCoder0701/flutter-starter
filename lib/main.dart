@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_starter/providers/theme_provider.dart';
 import 'package:go_router/go_router.dart';
 import 'package:upgrader/upgrader.dart';
 
@@ -38,16 +40,28 @@ final _router = GoRouter(
   ],
 );
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeProvider);
+
     return UpgradeAlert(
       child: MaterialApp.router(
         title: 'Flutter Starter',
+        themeMode: themeMode,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            brightness: Brightness.light,
+          ),
+        ),
+        darkTheme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            brightness: Brightness.dark,
+          ),
         ),
         routerConfig: _router,
       ),
