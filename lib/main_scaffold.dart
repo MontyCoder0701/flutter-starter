@@ -19,6 +19,7 @@ class MainScaffold extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeProvider);
+    final themeNotifier = ref.read(themeProvider.notifier);
     final isDark = themeMode == ThemeMode.dark;
 
     final location = GoRouterState.of(context).uri.toString();
@@ -71,7 +72,6 @@ class MainScaffold extends ConsumerWidget {
               secondary: const Icon(Icons.dark_mode),
               value: isDark,
               onChanged: (value) {
-                final themeNotifier = ref.read(themeProvider.notifier);
                 themeNotifier.state = value ? ThemeMode.dark : ThemeMode.light;
               },
             ),
