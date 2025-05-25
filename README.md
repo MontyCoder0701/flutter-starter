@@ -36,7 +36,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 - Component: Material(Google)
 - Layout: includes bottom navigation bar
-- Theme: light, dark with state management
+- Theme: light, dark with state management and local storage
 - Supported OS: iOS, Android
 - App icon:
 

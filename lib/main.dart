@@ -4,12 +4,15 @@ import 'package:upgrader/upgrader.dart';
 
 import 'go_router.dart';
 import 'l10n/app_localizations.dart';
-import 'providers/locale_provider.dart';
-import 'providers/theme_provider.dart';
+import 'services/local_storage_manager.dart';
+import 'services/providers/locale_provider.dart';
+import 'services/providers/theme_provider.dart';
 import 'theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await LocalStorageManager.initialize();
+
   runApp(const ProviderScope(child: MyApp()));
 }
 

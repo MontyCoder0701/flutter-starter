@@ -3,21 +3,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'l10n/app_localizations.dart';
-import 'providers/locale_provider.dart';
-import 'providers/theme_provider.dart';
+import 'services/providers/locale_provider.dart';
+import 'services/providers/theme_provider.dart';
 
 class MainDrawer extends ConsumerWidget {
   const MainDrawer({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeProvider);
     final themeNotifier = ref.read(themeProvider.notifier);
-    final isDark = themeMode == ThemeMode.dark;
+    final isDarkTheme = themeNotifier.isDarkTheme;
 
-    final locale = ref.watch(localeProvider);
     final localeNotifier = ref.read(localeProvider.notifier);
-    final isEnglish = locale == const Locale('en');
+    final isLocaleEnglish = localeNotifier.state == const Locale('en');
     final localize = AppLocalizations.of(context)!;
 
     return Drawer(
@@ -64,19 +62,17 @@ class MainDrawer extends ConsumerWidget {
           SwitchListTile(
             title: const Text('Theme'),
             secondary: const Icon(Icons.dark_mode),
-            value: isDark,
+            value: isDarkTheme,
             onChanged: (value) {
-              themeNotifier.state = value ? ThemeMode.dark : ThemeMode.light;
+              themeNotifier.toggleTheme();
             },
           ),
           SwitchListTile(
             title: Text(localize.translate),
             secondary: const Icon(Icons.language),
-            value: isEnglish,
+            value: isLocaleEnglish,
             onChanged: (value) {
-              localeNotifier.state = value
-                  ? const Locale('en')
-                  : const Locale('ko');
+              isLocaleEnglish ? const Locale('en') : const Locale('ko');
             },
           ),
         ],
