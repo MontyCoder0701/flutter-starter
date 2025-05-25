@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_starter/l10n/app_localizations.dart';
-import 'package:flutter_starter/providers/locale_provider.dart';
+import 'package:flutter_starter/main_drawer.dart';
 import 'package:go_router/go_router.dart';
-
-import 'providers/theme_provider.dart';
 
 class MainScaffold extends ConsumerWidget {
   final Widget child;
@@ -20,79 +17,11 @@ class MainScaffold extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeProvider);
-    final themeNotifier = ref.read(themeProvider.notifier);
-    final isDark = themeMode == ThemeMode.dark;
-
-    final locale = ref.watch(localeProvider);
-    final localeNotifier = ref.read(localeProvider.notifier);
-    final isEnglish = locale == Locale('en');
-    final localize = AppLocalizations.of(context)!;
-
     final location = GoRouterState.of(context).uri.toString();
     final selectedIndex = _locationToTabIndex(location);
 
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-              ),
-              child: Text(
-                'Drawer',
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onPrimary,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Screen 1'),
-              onTap: () {
-                Navigator.pop(context);
-                context.go('/screen1');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.explore),
-              title: const Text('Screen 2'),
-              onTap: () {
-                Navigator.pop(context);
-                context.go('/screen2');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text('Screen 3'),
-              onTap: () {
-                Navigator.pop(context);
-                context.go('/screen3');
-              },
-            ),
-            const Divider(),
-            SwitchListTile(
-              title: const Text('Theme'),
-              secondary: const Icon(Icons.dark_mode),
-              value: isDark,
-              onChanged: (value) {
-                themeNotifier.state = value ? ThemeMode.dark : ThemeMode.light;
-              },
-            ),
-            SwitchListTile(
-              title: Text(localize.translate),
-              secondary: const Icon(Icons.language),
-              value: isEnglish,
-              onChanged: (value) {
-                localeNotifier.state = value ? Locale('en') : Locale('ko');
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: MainDrawer(),
       appBar: AppBar(
         title: const Text('Flutter Starter'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
