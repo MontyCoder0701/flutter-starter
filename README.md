@@ -32,7 +32,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 - **Dependabot**: automatic dependency updates
 - **Dependabot Validation**: automatic build check for dependabot PRs
 - **CI**: basic continuous integration for lint checks
-- **Upgrader**: alerts users when update is published in application store
+- [**Upgrader**](https://pub.dev/packages/upgrader): alerts users when update is published in application store
 
 ### Design
 
