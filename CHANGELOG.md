@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/MontyCoder0701/flutter-starter/compare/v1.1.0...v1.2.0) (2025-05-25)
+
+
+### Features
+
+* apply translations ([44f58d6](https://github.com/MontyCoder0701/flutter-starter/commit/44f58d60ace62576e5dea0cd875deb84b5dd6b55))
+* 번역 전체 적용 ([385b687](https://github.com/MontyCoder0701/flutter-starter/commit/385b687e3b005cd7c0cb97f1976c6ac1c4b140a1))
+
 ## [1.1.0](https://github.com/MontyCoder0701/flutter-starter/compare/v1.0.0...v1.1.0) (2025-05-25)
 
 
