@@ -15,6 +15,9 @@ dependencies:
   go_router: ^15.1.2
   upgrader: ^11.4.0
   flutter_riverpod: ^2.6.1
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +29,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true

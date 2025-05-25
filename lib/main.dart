@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_starter/go_router.dart';
-import 'package:flutter_starter/providers/theme_provider.dart';
-import 'package:flutter_starter/theme.dart';
 import 'package:upgrader/upgrader.dart';
+
+import 'go_router.dart';
+import 'l10n/app_localizations.dart';
+import 'providers/locale_provider.dart';
+import 'providers/theme_provider.dart';
+import 'theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,15 +18,19 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(localeProvider);
     final themeMode = ref.watch(themeProvider);
 
     return UpgradeAlert(
       child: MaterialApp.router(
         title: 'Flutter Starter',
+        locale: locale,
         themeMode: themeMode,
         theme: CustomTheme.light,
         darkTheme: CustomTheme.dark,
         routerConfig: goRouter,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
       ),
     );
   }
