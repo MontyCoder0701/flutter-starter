@@ -27,6 +27,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    Center(child: Text('Page 1 - Add')),
+    Center(child: Text('Page 2 - Home')),
+    Center(child: Text('Page 3 - Delete')),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,14 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Flutter Starter'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[const Text('Hello World')],
-        ),
-      ),
+      body: IndexedStack(index: _selectedIndex, children: _pages),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Item 1'),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Item 2'),
           BottomNavigationBarItem(icon: Icon(Icons.delete), label: 'Item 3'),
