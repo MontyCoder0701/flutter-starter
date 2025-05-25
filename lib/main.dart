@@ -40,6 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[const Text('Hello World')],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Item 1'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Item 2'),
+          BottomNavigationBarItem(icon: Icon(Icons.delete), label: 'Item 3'),
+        ],
+      ),
     );
   }
 }
