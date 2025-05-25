@@ -21,18 +21,21 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ### Maintenance
 
-- **Release Please** – automated release management
-- **Dependabot** – automatic dependency updates
-- **Dependabot Validation** - automatic build check for dependabot PRs
-- **CI** – basic continuous integration for lint checks
-- **Upgrader** - alerts users when update is published in application store
+- **Release Please**: automated release management
+- **Dependabot**: automatic dependency updates
+- **Dependabot Validation**: automatic build check for dependabot PRs
+- **CI**: basic continuous integration for lint checks
+- **Upgrader**: alerts users when update is published in application store
 
 ### Design
 
-- Material(Google) for UI components
-- Basic layout with bottom navigation bar
-- Theme (Light, Dark) with state management
-- Ready for iOS and Android
+- Component: Material(Google)
+- Layout: includes bottom navigation bar
+- Theme: light, dark with state management
+- Supported OS: iOS, Android
+- App icon:
+
+> Change `assets/icon/icon.png` and run `flutter pub run flutter_launcher_icons`
 
 ## Preview
 
