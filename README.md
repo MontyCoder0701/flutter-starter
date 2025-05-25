@@ -5,6 +5,10 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ## What's Included
 
+## State Management
+
+- [**Riverpod**](https://riverpod.dev/)
+
 ### Maintenance
 
 - **Release Please** – automated release management
@@ -22,6 +26,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 - Material(Google) for UI components
 - Basic layout with bottom navigation bar
+- Theme (Light, Dark) with state management
 - Ready for iOS and Android
 
 ## Preview
