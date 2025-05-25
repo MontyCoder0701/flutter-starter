@@ -9,5 +9,5 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get helloWorld => '헬로 월드';
+  String get translate => '번역하기';
 }

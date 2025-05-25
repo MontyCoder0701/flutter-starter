@@ -95,11 +95,11 @@ abstract class AppLocalizations {
     Locale('ko')
   ];
 
-  /// No description provided for @helloWorld.
+  /// No description provided for @translate.
   ///
   /// In en, this message translates to:
-  /// **'Hello World!'**
-  String get helloWorld;
+  /// **'Translate'**
+  String get translate;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

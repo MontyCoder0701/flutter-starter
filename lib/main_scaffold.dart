@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_starter/l10n/app_localizations.dart';
+import 'package:flutter_starter/providers/locale_provider.dart';
 import 'package:go_router/go_router.dart';
 
 import 'providers/theme_provider.dart';
@@ -21,6 +23,11 @@ class MainScaffold extends ConsumerWidget {
     final themeMode = ref.watch(themeProvider);
     final themeNotifier = ref.read(themeProvider.notifier);
     final isDark = themeMode == ThemeMode.dark;
+
+    final locale = ref.watch(localeProvider);
+    final localeNotifier = ref.read(localeProvider.notifier);
+    final isEnglish = locale == Locale('en');
+    final localize = AppLocalizations.of(context)!;
 
     final location = GoRouterState.of(context).uri.toString();
     final selectedIndex = _locationToTabIndex(location);
@@ -73,6 +80,14 @@ class MainScaffold extends ConsumerWidget {
               value: isDark,
               onChanged: (value) {
                 themeNotifier.state = value ? ThemeMode.dark : ThemeMode.light;
+              },
+            ),
+            SwitchListTile(
+              title: Text(localize.translate),
+              secondary: const Icon(Icons.language),
+              value: isEnglish,
+              onChanged: (value) {
+                localeNotifier.state = value ? Locale('en') : Locale('ko');
               },
             ),
           ],
