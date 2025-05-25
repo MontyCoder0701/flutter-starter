@@ -24,7 +24,7 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 ### Local Storage
 
 - [**shared_preferences**](https://pub.dev/packages/shared_preferences) for local storage
-- Applied to theme and locale persistance
+- Applied to theme persistance
 
 ### Maintenance
 
