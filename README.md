@@ -32,7 +32,8 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 - **Dependabot**: automatic dependency updates
 - **Dependabot Validation**: automatic build check for dependabot PRs
 - **CI**: basic continuous integration for lint checks
-- [**Upgrader**](https://pub.dev/packages/upgrader): alerts users when update is published in application store
+- [**Upgrader**](https://pub.dev/packages/upgrader): alerts users when update is published in
+  application store
 
 ### Design
 
@@ -62,6 +63,9 @@ Use it for hackathons or external projects as a boilerplate — clone and custom
 
 ## Notice
 
-If you're using Dependabot, ensure the following setting is enabled:
+- If you're using Dependabot, ensure the following setting is enabled:
 
 > **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**
+
+- This assumes you are using Java 21 (Bundled with Android Studio Meerkat). If you are having
+  trouble building the Android project, adjust your settings to use Java 21 JDK.
