@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_starter/main_drawer.dart';
 import 'package:go_router/go_router.dart';
 
-class MainScaffold extends ConsumerWidget {
+class MainScaffold extends StatelessWidget {
   final Widget child;
 
   const MainScaffold({super.key, required this.child});
@@ -16,7 +15,7 @@ class MainScaffold extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
     final selectedIndex = _locationToTabIndex(location);
 
