@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/main_drawer.dart';
 import 'package:go_router/go_router.dart';
+
+import '/main_drawer.dart';
 
 class MainScaffold extends StatelessWidget {
   final Widget child;

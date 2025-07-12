@@ -1,8 +1,8 @@
-import 'package:flutter_starter/screens/screen1.dart';
-import 'package:flutter_starter/screens/screen2.dart';
-import 'package:flutter_starter/screens/screen3.dart';
 import 'package:go_router/go_router.dart';
 
+import '/screens/screen1.dart';
+import '/screens/screen2.dart';
+import '/screens/screen3.dart';
 import 'main_scaffold.dart';
 
 final goRouter = GoRouter(
