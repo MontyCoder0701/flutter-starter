@@ -3,18 +3,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../local_storage_manager.dart';
 
-class ThemeController extends StateNotifier<ThemeMode> {
-  ThemeController() : super(ThemeMode.system) {
-    _initialize();
-  }
-
+class ThemeController extends Notifier<ThemeMode> {
   bool get isDarkTheme => state == ThemeMode.dark;
 
-  void _initialize() {
+  @override
+  ThemeMode build() {
     final isPreviouslyDarkTheme = LocalStorageManager.getBool('isDarkTheme');
     if (isPreviouslyDarkTheme != null) {
-      state = isPreviouslyDarkTheme ? ThemeMode.dark : ThemeMode.light;
+      return isPreviouslyDarkTheme ? ThemeMode.dark : ThemeMode.light;
     }
+    return ThemeMode.light;
   }
 
   void toggleTheme() {
@@ -23,6 +21,6 @@ class ThemeController extends StateNotifier<ThemeMode> {
   }
 }
 
-final themeProvider = StateNotifierProvider<ThemeController, ThemeMode>(
-  (ref) => ThemeController(),
+final themeProvider = NotifierProvider<ThemeController, ThemeMode>(
+  ThemeController.new,
 );
