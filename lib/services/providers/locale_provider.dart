@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LocaleController extends StateNotifier<Locale> {
-  LocaleController() : super(Locale('en'));
+class LocaleController extends Notifier<Locale> {
+  @override
+  Locale build() => const Locale('en');
 
-  bool get isLocaleEnglish => state == Locale('en');
+  bool get isLocaleEnglish => state == const Locale('en');
 
   void toggleLocale() {
-    state = isLocaleEnglish ? Locale('ko') : Locale('en');
+    state = isLocaleEnglish ? const Locale('ko') : const Locale('en');
   }
 }
 
-final localeProvider = StateNotifierProvider<LocaleController, Locale>(
-  (ref) => LocaleController(),
+final localeProvider = NotifierProvider<LocaleController, Locale>(
+  LocaleController.new,
 );
