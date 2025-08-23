@@ -12,7 +12,7 @@ class ThemeController extends Notifier<ThemeMode> {
     if (isPreviouslyDarkTheme != null) {
       return isPreviouslyDarkTheme ? ThemeMode.dark : ThemeMode.light;
     }
-    return ThemeMode.light;
+    return ThemeMode.system;
   }
 
   void toggleTheme() {
